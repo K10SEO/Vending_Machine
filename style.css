@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
+
+:root {
+    background-color: #EAE8FE;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.all {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 180px;
+    margin-bottom: 67px;
+}
+
+.logo img {
+    width: 386px;
+    height: 180px;
+}
+/* 상점 */
+.vendingMh {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* 아이템 리스트 */
+.item-list {
+    width: 360px;
+    padding: 31px 27px 28px 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+
+.item {
+    display: grid;
+    grid-template-columns: repeat(3, 94px);
+    grid-template-rows: repeat(2, 130px);
+    gap: 12px;
+}
+.item li {
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 0 9px;
+    font-size: 9px;
+    box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.item button {
+    background-color: #6327FE;
+    color: #FFFFFF;
+    border-radius: 50px;
+    width: 70px;
+    height: 22px;
+    line-height: 1;
+    border: none;
+}
+
+.item li img {
+    width: 36px;
+}
+
+.sold {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.sold::before {
+    content: "";
+    background-image: url(./mediaquery/Sold-out.png);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 15%;
+    transform: translate();
+    position: absolute;
+    z-index: 1;
+}
+
+.sold::after {
+    content: "";
+    background-size: 100px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:absolute;
+}
+
+/* 아이템 계산 */
+.credit {
+    margin-top: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 200px 94px);
+    grid-template-rows: repeat(2, 32px);
+    gap: 11px;
+    background-color: #FFFFFF;
+    
+    
+}
+
+.pay {
+    background-color: #EAE8FE;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px 7px;
+    font-size: 14px;
+}
+
+.credit button {
+    font-size: 13px;
+    border-radius: 5px;
+    box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.push-mony {
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(189, 189, 189,);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/*장바구니 및 구매*/
+.shopping {
+    margin-top: 11px;
+    display: grid;
+    grid-template-columns: repeat(1,200px 94px);
+    gap: 12px;
+}
+
+.sp-list {
+    width: 200px;
+    height: 106px;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 12px 18px 0 12px;
+    border: 1px solid #BDBDBD;
+    background-color: #EAE8FE;
+    box-sizing: border-box;
+    
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.sp-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sp-list::-webkit-scrollbar-thumb {
+    background-color: #2f3442;
+}
+
+.sp-list::-webkit-scrollbar-track {
+    background-color: gray;
+}
+
+.shoppingcart li {
+    width: 170px;
+    height: 46px;
+    margin-bottom: 6px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 8px 7px 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shoppingcart li img {
+    width: 18px;
+
+}
+
+.shoppingcart p {
+    margin-left: -20px;
+    font-size: 9px;
+
+}
+
+.shoppingcart div {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+}
+
+.get-item {
+    width: 94px;
+    height: 106px;
+    border-radius: 5px;
+    background-color: #6327FE;
+    color: #FFFFFF;
+    border: none;
+}
+/* 내 아이템 가방*/
+.my { 
+    width: 360px;
+    margin-left: 28px;
+}
+
+.money {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 9px 27px;
+    background-color: #FFFFFF;
+}
+
+.my-money {
+    height: 2.3em;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: 
+    #EAE8FE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-item {
+    height: 474px;
+    box-sizing: border-box;
+    padding: 25px 27px 26px;
+    background-color: #FFFFFF;
+    
+}
+.my-item h2 {
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 14px; 
+    text-align: center;
+}
+
+.buy-item {
+    height: 364px;
+    background-color: 
+    #EAE8FE;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    padding: 12px 18px 0 16px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.my-item p {
+    margin-top: 6px;
+    text-align: right; 
+    font-size: 12px;
+    font-weight: 500;
+}
