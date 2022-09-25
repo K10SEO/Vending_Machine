@@ -31,6 +31,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+
 }
 /* 아이템 리스트 */
 .item-list {
@@ -41,6 +44,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #FFFFFF;
+
 }
 
 
@@ -60,6 +64,11 @@ body {
     padding: 11px 0 9px;
     font-size: 9px;
     box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.item li:hover {
+    outline: solid 3px #6327FE;    
 }
 
 .item button {
@@ -83,7 +92,7 @@ body {
 }
 
 .sold::before {
-    content: "";
+    content: " ";
     background-image: url(./mediaquery/Sold-out.png);
     background-size: 70px;
     background-repeat: no-repeat;
@@ -91,13 +100,12 @@ body {
     height: 100px;
     top: 30%;
     left: 15%;
-    transform: translate();
     position: absolute;
     z-index: 1;
 }
 
 .sold::after {
-    content: "";
+    content: " ";
     background-size: 100px;
     width: 100%;
     height: 100%;
@@ -139,14 +147,21 @@ body {
 }
 
 .push-mony {
+    padding: 6px 6px 8px 6px;
     border-radius: 5px;
     border: 1px solid #BDBDBD;
     font-family: 'Noto Sans KR', sans-serif;
-    color: rgb(189, 189, 189,);
+    color: rgba(189, 189, 189);
     font-weight: 500;
     font-size: 13px;
 }
 
+.push-mony::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+  
 /*장바구니 및 구매*/
 .shopping {
     margin-top: 11px;
@@ -163,7 +178,6 @@ body {
     padding: 12px 18px 0 12px;
     border: 1px solid #BDBDBD;
     background-color: #EAE8FE;
-    box-sizing: border-box;
     
     overflow: scroll;
     overflow-x: hidden;
@@ -174,11 +188,14 @@ body {
 }
 
 .sp-list::-webkit-scrollbar-thumb {
-    background-color: #2f3442;
+    background-color: #ffffff;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
 }
 
 .sp-list::-webkit-scrollbar-track {
-    background-color: gray;
+    background-color: #EAE8FE;
 }
 
 .shoppingcart li {
@@ -228,7 +245,6 @@ body {
 /* 내 아이템 가방*/
 .my { 
     width: 360px;
-    margin-left: 28px;
 }
 
 .money {
@@ -272,7 +288,8 @@ body {
     #EAE8FE;
     border: 1px solid #BDBDBD;
     border-radius: 5px;
-    padding: 12px 18px 0 16px;
+    padding: 12px 18px 0 12px;
+
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -282,4 +299,53 @@ body {
     text-align: right; 
     font-size: 12px;
     font-weight: 500;
+}
+
+.buy-item li {
+    width: 276px;
+    height: 46px;
+    margin-bottom: 6px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 8px 7px 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buy-item li img {
+    width: 18px;
+}
+
+.buy-item li p {
+    margin-left: -110px;
+}
+
+.my-item li div {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+}
+
+.buy-item::-webkit-scrollbar {
+    width: 10px;
+}
+
+.buy-item::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
+.buy-item::-webkit-scrollbar-track {
+    background-color: #EAE8FE;
+    
 }
